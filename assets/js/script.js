@@ -50,15 +50,15 @@ var questions = [
         alerts: "console.log"
     }
 ];
-
-
-var startButton = document.querySelector("#start-quiz");
-var quizContainer = document.querySelector("#quiz-box");
-var Button = document.querySelector(".btn");
-var timer = document.querySelector("#timer");
 var quizHeader = document.querySelector("#quiz-header");
 var quizText = document.querySelector("#quiz-text");
 var highScore = document.querySelector("#high-score");
+
+var startButton = document.querySelector("#start-quiz");
+var quizContainer = document.querySelector("#quiz-box");
+var quizButton = document.querySelector(".btn");
+var timer = document.querySelector("#timer");
+
 var listEl;
 var buttonEl;
 var timeStart = 75;
@@ -167,7 +167,7 @@ var getGame = function() {
         for (var i = 0; i < savedScore.length; i++) {
             var leaderBoards = document.createElement("li");
             leaderBoards.className = "lbrd";
-            leaderBoards.textContent = "HighScore!"
+            leaderBoards.textContent = ""
             highScore.appendChild(leaderBoards);
             var previousGame = document.createElement("li");
             previousGame.className = "prev-game";
